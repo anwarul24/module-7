@@ -1,5 +1,7 @@
 # Personal Portfolio — Django Beginner Assignment
 
+![Logo](screenshots/1.png)
+
 A simple personal portfolio website built with **Django, HTML, and CSS**,
 following the standard Django flow: **Model → View → URL → Template**.
 
