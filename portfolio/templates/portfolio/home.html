@@ -1,0 +1,29 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block title %}Anwarul Islam Anik | Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-inner">
+        <img src="{% static 'portfolio/img/profile.jpg' %}" alt="Anwarul Islam Anik" class="profile-pic"
+             onerror="this.src='https://placehold.co/220x220?text=Photo'">
+        <h1>Anwarul Islam Anik</h1>
+        <p class="tagline">Web Developer &middot; PHP / Django Learner &middot; Sherpur, Bangladesh</p>
+        <p class="intro">
+            I build clean, practical web applications — from raw PHP MVC systems to
+            Django-powered sites. Currently exploring Django to expand beyond my
+            PHP/CodeIgniter background, one project at a time.
+        </p>
+        <a href="{% url 'portfolio:project_list' %}" class="btn btn-primary">View My Projects</a>
+    </div>
+</section>
+
+<section class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        {% for skill in skills %}
+        <span class="skill-pill">{{ skill }}</span>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
